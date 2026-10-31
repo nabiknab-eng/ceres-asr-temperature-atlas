@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.mpl-cache/
+raw/*.nc
+data/*.nc
+*.part
+.DS_Store

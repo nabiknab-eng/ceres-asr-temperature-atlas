@@ -1,0 +1,260 @@
+{
+  "status": "PASS",
+  "period": "2001-01/2025-12",
+  "grid_shape": [
+    180,
+    360
+  ],
+  "five_year_periods": [
+    [
+      2001,
+      2005
+    ],
+    [
+      2006,
+      2010
+    ],
+    [
+      2011,
+      2015
+    ],
+    [
+      2016,
+      2020
+    ],
+    [
+      2021,
+      2025
+    ]
+  ],
+  "five_year_aggregation": "mean of five unmodified annual anomaly fields; equal year weights; NaN propagated; color saturation applied after averaging",
+  "grid_identical": true,
+  "fields": {
+    "asr": {
+      "selected_months": 300,
+      "monthly_missing_values": 0,
+      "complete_reference_cells": 64800,
+      "incomplete_reference_cells": 0,
+      "incomplete_annual_cells": 0,
+      "mean_of_anomalies_max_abs": 1.2278178473934532e-13,
+      "fixed_scale": 20.0,
+      "actual_max_abs": 38.48131663311693,
+      "extreme_year": 2015,
+      "extreme_lat": -1.5,
+      "extreme_lon": 178.5,
+      "extreme_signed_value": -38.48131663311693,
+      "minimum_spatial_std": 3.2376655709144964,
+      "independent_weighting_check_error": 0.0,
+      "scale_policy": "user-fixed display limit; saturation beyond endpoints; numerical values not clipped",
+      "annual_saturated_below": 992,
+      "annual_saturated_above": 992,
+      "five_year_actual_max_abs": 15.565219657224588,
+      "five_year_saturated_below": 0,
+      "five_year_saturated_above": 0,
+      "mean_of_five_year_anomalies_max_abs": 1.2279066652354231e-13,
+      "independent_five_year_aggregation_check_error": 1.0236256287043943e-13,
+      "saturation_checks_pass": true,
+      "calendar_days_per_year": [
+        365,
+        365,
+        365,
+        366,
+        365,
+        365,
+        365,
+        366,
+        365,
+        365,
+        365,
+        366,
+        365,
+        365,
+        365,
+        366,
+        365,
+        365,
+        365,
+        366,
+        365,
+        365,
+        365,
+        366,
+        365
+      ]
+    },
+    "temperature": {
+      "selected_months": 300,
+      "monthly_missing_values": 21539,
+      "complete_reference_cells": 63974,
+      "incomplete_reference_cells": 826,
+      "incomplete_annual_cells": 7496,
+      "mean_of_anomalies_max_abs": 1.3500311979441904e-15,
+      "fixed_scale": 4.0,
+      "actual_max_abs": 6.971645365765187,
+      "extreme_year": 2003,
+      "extreme_lat": 76.5,
+      "extreme_lon": 52.5,
+      "extreme_signed_value": -6.971645365765187,
+      "minimum_spatial_std": 0.41970773024090663,
+      "independent_weighting_check_error": 0.0,
+      "scale_policy": "user-fixed display limit; saturation beyond endpoints; numerical values not clipped",
+      "annual_saturated_below": 335,
+      "annual_saturated_above": 414,
+      "five_year_actual_max_abs": 3.57781506741609,
+      "five_year_saturated_below": 0,
+      "five_year_saturated_above": 0,
+      "mean_of_five_year_anomalies_max_abs": 1.3766765505351941e-15,
+      "independent_five_year_aggregation_check_error": 1.3322676295501878e-15,
+      "saturation_checks_pass": true,
+      "calendar_days_per_year": [
+        365,
+        365,
+        365,
+        366,
+        365,
+        365,
+        365,
+        366,
+        365,
+        365,
+        365,
+        366,
+        365,
+        365,
+        365,
+        366,
+        365,
+        365,
+        365,
+        366,
+        365,
+        365,
+        365,
+        366,
+        365
+      ]
+    }
+  },
+  "projection": {
+    "projection": "+proj=moll +lon_0=0 +R=1",
+    "central_meridian": 0,
+    "inverse_vs_proj_max_error_degrees": 2.2168933355715126e-12,
+    "max_relative_area_jacobian_error": 1.8424669567806973e-09,
+    "sphere_and_ellipse_area": 12.566370614359172,
+    "geographic_controls_pass": true
+  },
+  "palette": {
+    "negative_shades": 10,
+    "positive_shades": 10,
+    "exact_zero": "#ffffff",
+    "missing": "#d2d6dc",
+    "bin_rule": "display clipped to [-M,M]; negative: [-M,-0.9M), ..., [-0.1M,0); positive: (0,0.1M], ..., (0.9M,M]; zero only is white; numerical values not clipped",
+    "rgb": [
+      [
+        18,
+        61,
+        131
+      ],
+      [
+        42,
+        81,
+        144
+      ],
+      [
+        66,
+        101,
+        157
+      ],
+      [
+        90,
+        122,
+        171
+      ],
+      [
+        114,
+        142,
+        184
+      ],
+      [
+        139,
+        162,
+        197
+      ],
+      [
+        163,
+        182,
+        210
+      ],
+      [
+        187,
+        203,
+        224
+      ],
+      [
+        211,
+        223,
+        237
+      ],
+      [
+        235,
+        243,
+        250
+      ],
+      [
+        255,
+        255,
+        255
+      ],
+      [
+        252,
+        237,
+        233
+      ],
+      [
+        242,
+        213,
+        212
+      ],
+      [
+        232,
+        190,
+        191
+      ],
+      [
+        223,
+        166,
+        170
+      ],
+      [
+        213,
+        142,
+        149
+      ],
+      [
+        203,
+        119,
+        127
+      ],
+      [
+        193,
+        95,
+        106
+      ],
+      [
+        184,
+        71,
+        85
+      ],
+      [
+        174,
+        48,
+        64
+      ],
+      [
+        164,
+        24,
+        43
+      ]
+    ]
+  }
+}

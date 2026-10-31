@@ -1,0 +1,62 @@
+{
+  "status": "PASS for HTTP local preview",
+  "visually_inspected_years": [
+    2001,
+    2015,
+    2025
+  ],
+  "both_maps_loaded": true,
+  "map_native_pixels": [
+    1800,
+    900
+  ],
+  "previous_next_transition": [
+    2001,
+    2002,
+    2001
+  ],
+  "overview_year_count": 25,
+  "overview_map_count": 50,
+  "reference_maps_white_with_outlines": true,
+  "reference_uses_identical_image_for_both_variables": true,
+  "missing_local_resources": [],
+  "javascript_syntax": "PASS",
+  "offline_design": "All required presentation assets are local; no runtime network calls, CDN or server dependency.",
+  "verification_limit": "Browser security policy disallows file:// navigation, so direct offline file opening was not tested in the automated browser. Visual QA used http://127.0.0.1:8765.",
+  "equal_displayed_map_dimensions": true,
+  "displayed_map_pixels": [
+    548,
+    274
+  ],
+  "legend_swatch_count_each": 21,
+  "numeric_labels_each": 3,
+  "javascript_console_errors": [],
+  "page_horizontal_overflow": false,
+  "visually_inspected_five_year_periods": [
+    "2001-2005",
+    "2011-2015",
+    "2021-2025"
+  ],
+  "five_year_period_count": 5,
+  "five_year_overview_map_count": 10,
+  "color_scales": {
+    "asr": [
+      -20,
+      20
+    ],
+    "temperature": [
+      -4,
+      4
+    ]
+  },
+  "saturation_only_in_display": true,
+  "annual_and_reference_numeric_values_identical_to_previous": true,
+  "period_aggregation_exact_equal_weight_average": true,
+  "previous_next_period_transition": [
+    "2021-2025",
+    "2016-2020",
+    "2021-2025"
+  ],
+  "asr_albedo_definition_in_introduction": true,
+  "asr_albedo_change_statement_conditioned_on_equal_incoming_flux": true
+}
