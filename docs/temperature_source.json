@@ -1,0 +1,26 @@
+{
+  "path": "raw/Global_TAVG_Gridded_1deg.nc",
+  "sha256": "937c4b1911849eb3c39cf91c4f0773f9565d412784080c4a66408b1c1eeb8d73",
+  "bytes": 429525123,
+  "units": {
+    "temperature": "degree C"
+  },
+  "selected_months": 300,
+  "source_period": {
+    "first": "1850-01",
+    "last": "2026-09"
+  },
+  "source_attributes": {
+    "Conventions": "Berkeley Earth Internal Convention (based on CF-1.5)",
+    "title": "Berkeley Earth Surface Temperature Anomaly Field",
+    "file_creation": "29-Oct-2026 11:03:07",
+    "institution": "Berkeley Earth",
+    "land_source_analysis_date": "13-Oct-2026 22:44:31",
+    "ocean_source_analysis_date": "14-Oct-2026 15:29:29",
+    "comment": "This file contains surface temperature anomaly field gridded on a 1\u00b0 (longitude) by 1\u00b0 (latitude) grid-box basis."
+  },
+  "monthly_missing_values": 21539,
+  "sorted_latitude": true,
+  "sorted_longitude": true,
+  "regridding": "none; 1-degree cell centers identical; longitude convention and index permutation only"
+}
