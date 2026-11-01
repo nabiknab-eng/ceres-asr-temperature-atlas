@@ -1,62 +1,62 @@
-# Globální atlas ASR a povrchové teploty · 2001–2025
+# CERES × Berkeley Earth: interaktivní animace a MP4
 
-Veřejný atlas 25 ročních a 5 pětiletých dvojic globálních map. CERES EBAF-TOA Ed4.2.1 a Berkeley Earth High-Resolution TAVG, společná reference 2001–2025.
+**[Otevřít živý atlas](https://nabiknab-eng.github.io/ceres-asr-temperature-atlas/)**
 
-## Stažení a otevření
+- [Offline atlas a exportní nástroj (ZIP)](https://github.com/nabiknab-eng/ceres-asr-temperature-atlas/releases/download/v2.0.0/ceres_animace_prohlizeni_a_export.zip)
+- [Původní měsíční vstupy pro reprodukci (archiv v1.0.0)](https://github.com/nabiknab-eng/ceres-asr-temperature-atlas/releases/download/v1.0.0/ceres_atlas_uplny.zip)
+- [Hotové MP4 celého období, 1920 × 1080 / H.264](https://github.com/nabiknab-eng/ceres-asr-temperature-atlas/releases/download/v2.0.0/animace_2000-2026_ASR20_T4_6fps.mp4)
+- [Klouzavé anomálie v plné přesnosti (NetCDF)](https://github.com/nabiknab-eng/ceres-asr-temperature-atlas/releases/download/v2.0.0/rolling_anomalies.nc)
+- [Všechny přílohy vydání v2.0.0](https://github.com/nabiknab-eng/ceres-asr-temperature-atlas/releases/tag/v2.0.0)
 
-- [Prezentace, mapy, NetCDF a skripty (ZIP)](https://github.com/nabiknab-eng/ceres-asr-temperature-atlas/releases/download/v1.0.0/ceres_atlas_prezentace_a_vysledky.zip) — rozbalte a otevřete `ceres_atlas/index.html`; funguje offline bez serveru.
-- [Úplný reprodukční balíček včetně původních vstupních dat (ZIP)](https://github.com/nabiknab-eng/ceres-asr-temperature-atlas/releases/download/v1.0.0/ceres_atlas_uplny.zip).
-- [Všechny soubory vydání v1.0.0](https://github.com/nabiknab-eng/ceres-asr-temperature-atlas/releases/tag/v1.0.0).
+Rozbalte offline ZIP a otevřete `ceres_animace/index.html`. Pro nové MP4 stáhněte z HTML exportní JSON a spusťte doprovodný Python skript. Samotné tlačítko v prohlížeči video nekóduje.
 
-Zdrojový kód, HTML a lokální mapové obrázky jsou také přímo v tomto repozitáři. GitHub soubor HTML zobrazuje jako zdrojový kód; pro prohlížení atlasu použijte stažený ZIP nebo po klonování otevřete `index.html` v běžném prohlížeči. Velké NetCDF a původní vstupy jsou distribuovány přes Releases.
+Pro úplnou reprodukci stáhněte nový offline ZIP a archiv vstupů v1.0.0. Z rozbaleného staršího archivu zkopírujte složku `ceres_atlas/raw` do `ceres_animace/original/raw`, nainstalujte `requirements.txt` a spusťte `build_animation.py`. Obě generace atlasu používají přesně stejné vstupní NetCDF, ověřené SHA-256.
 
-![Anomálie 2021–2025](docs/preview_2021-2025.png)
+Repozitář obsahuje zdroje a všechny bloky pro živý atlas. Velké NetCDF, původní měsíční vstupy a FFmpeg pro Mac jsou v přílohách vydání. Pro reprodukci výpočtů použijte úplný ZIP; pro prohlížení a nový export stačí menší ZIP. Po klonování lze export spustit po instalaci `requirements_export.txt`; Python čte datové bloky z `viewer/`.
 
-## Technické informace
+![Ukázka klouzavého okna](docs/preview_animation.png)
 
-**Dokončeno:** 25 ročních a 5 pětiletých dvojic map ASR a teploty, společná síť 1° × 1°, Mollweideovo plochojevné zobrazení s centrálním poledníkem 0°.
+# CERES × Berkeley Earth: místní animace a MP4
 
-Otevřete **index.html** přímo v prohlížeči. Soubory v `assets/` ponechte vedle HTML. Dokument funguje offline, bez serveru a CDN. Ovládání přepíná mezi ročními a pětiletými mapami a nabízí výběr roku/období, předchozí/další položku, přehled celé skupiny a bílý referenční pohled.
+Otevřete **index.html** v aktuálním Safari, Chrome nebo Firefoxu. Celou složku ponechte pohromadě. Prohlížení funguje přímo ze souborů (`file://`), bez internetu, serveru, instalace nebo CDN. Složka `viewer` obsahuje místní datové bloky; první načtení bloku může krátce trvat, další blok se načítá dopředu. Udržuje se nejvýše pět dekomprimovaných bloků.
 
-## Vstupy
+K dispozici jsou dva ZIPy: **prohlížení a export** obsahuje vše pro HTML i nové MP4, původní atlas a původní roční / pětileté výsledky; **úplný balíček** navíc obsahuje původní velké měsíční vstupy a plné klouzavé NetCDF pro reprodukci výpočtů. V menším balíčku Python čte zobrazovací data přímo z místních JS bloků jako data, bez spouštění JavaScriptu. Sestavení výsledků od vstupních měsíčních polí vyžaduje úplný balíček.
 
-- **NASA CERES EBAF-TOA Edition4.2.1**, skutečné měsíční regionální NetCDF proměnné `solar_mon` a `toa_sw_all_mon`, W m⁻². ASR = příchozí sluneční tok minus odražený krátkovlnný tok. [Oficiální archiv](https://search.earthdata.nasa.gov/search/granules?p=C3880497643-LARC_CLOUD).
-- **Berkeley Earth High-Resolution global TAVG, oficiální 1° varianta**, soubor vytvořený 29. 10. 2026. Tato předběžná generace byla výslovně schválena jako náhrada ukončeného původního produktu. Celé období používá stejnou generaci. [Oficiální zdroj](https://berkeleyearth.org/data/). Nad mořským ledem se extrapolují anomálie teploty vzduchu z pevniny; nad otevřeným oceánem jde o teplotu povrchu moře.
-- **Natural Earth 50m coastline, 4.1.0** podle staženého VERSION.txt; bez hranic států.
+## Ovládání
 
-## Výpočet a škály
+- Tři režimy: původních 25 kalendářních roků, 307 měsíčních kroků 12měsíčních průměrů a zachované pětileté průměry.
+- Přehrát / pauza, krok zpět / vpřed, časový posuvník, rychlost 0,5–24 snímků/s. Každý krok je jeden další snímek, bez přeskakování měsíců; na konci se přehrávání zastaví.
+- Samostatné škály ASR ±5…±40 W/m² (krok 1) a teploty ±1…±7 °C (krok 0,2). Výchozí meze jsou ±20 a ±4. Změna se projeví i během přehrávání.
+- Automatická škála se nastavuje pro každou veličinu zvlášť z maxima celé právě zvolené časové řady. Je symetrická, zaokrouhlená nahoru na krok šoupátka a omezená jeho rozsahem. Je stálá během přehrávání. Ruční pohyb šoupátka její automatiku vypne.
+- Skutečné maximum klouzavých anomálií je 51,866 W/m² a 7,081 °C. Proto ani nejširší povolená škála neobsáhne všechny extrémy. Přesahy mají krajní barvu; plná výpočetní data nejsou oříznuta.
 
-ASR je pohlcený sluneční tok soustavy Země–atmosféra. Platí **ASR = F_in (1 − α)**, kde α je planetární albedo definované jako podíl odraženého a příchozího krátkovlnného toku pro stejnou oblast a období (při F_in > 0). **Při stejném F_in odpovídá růst ASR poklesu albeda a naopak.** Při změně příchozího toku nelze samotnou anomálii ASR jednoznačně převést na změnu albeda. Podrobná definice se zdroji je v úvodu HTML a v `METHODOLOGY.md`.
+## Export MP4
 
-V každé buňce se měsíce váží počtem dní v gregoriánském kalendáři. Reference je průměr 25 ročních průměrů se stejnou vahou roků. Anomálie = roční průměr minus místní reference. Roční hodnota vyžaduje 12 platných měsíců a reference 25 úplných let. Neúplné buňky zůstávají NaN a v mapě jsou šedé.
+V HTML zvolte režim, meze škál, začátek, konec a rychlost videa. Tlačítkem **Export MP4 — stáhnout nastavení** uložte `atlas-export.json`. Oba konce úseku jsou zahrnuty. Nastavení zachytí právě účinné meze i při zapnuté automatice.
 
-Pětileté mapy pokrývají **2001–2005, 2006–2010, 2011–2015, 2016–2020 a 2021–2025**. Každá je průměrem pěti ročních anomálií se stejnou vahou roků vůči společné referenci 2001–2025; průměrují se plné číselné hodnoty před přiřazením barev.
-
-Oba vstupy mají ověřeno všech 300 měsíců. Souřadnice jejich 1° sítí jsou totožné; u CERES se pouze přeuspořádají délky z 0…360° na −180…180°. Žádná interpolace ani převzorkování se neprovádějí. Teplotní úplná reference existuje v 63 974 z 64 800 buněk; 826 buněk zůstává ve všech letech šedých.
-
-| Veličina | Skutečné max. absolutní anomálie | Pevná škála | Úplné buňky | Max. reziduum průměru anomálií |
-|---|---:|---:|---:|---:|
-| Anomálie ASR | 38.4813166331 | ±20 W/m² | 64,800 | 1.228e-13 |
-| Anomálie povrchové teploty | 6.97164536577 | ±4 °C | 63,974 | 1.350e-15 |
-
-Škály jsou podle zadání **±20 W/m² (ASR) a ±4 °C (teplota)**, shodně pro roční i pětileté mapy. Hodnoty mimo meze mají stejnou krajní barvu jako příslušná mez; číselná data v NetCDF nejsou oříznuta. Každá škála má deset modrých a deset červených intervalů, přesná nula je bílá. Obrazové body se matematicky promítají do skutečných 1° buněk bez vyhlazování. Kontrola proti PROJ i numerická kontrola plochojevnosti prošly.
-
-## Soubory a reprodukce
-
-- `data/`: referenční pole, 25 ročních anomálií, roční průměry a počty platných měsíců v NetCDF.
-- `data/five_year_anomalies_2001-2025.nc`: pětileté anomálie a počty platných roků.
-- `raw/`: neměněné stažené vstupy. `provenance.json`: jejich atributy, URL a SHA-256.
-- `validation.json`: automatické kontroly, maxima a souřadnice extrémů. Celkový stav **PASS**.
-- `METHODOLOGY.md`: úplné technické podrobnosti, rovnice projekce, citace a zacházení s chybějícími daty.
-
-Ve složce atlasu, s Pythonem 3.12+:
+Na tomto Macu otevřete **Export_MP4.command**, přetáhněte stažený JSON do otevřeného terminálu a potvrďte Enter. Samotný Enter exportuje výchozí celé měsíční období. Výstup vznikne ve složce `exports`. FFmpeg pro Apple Silicon je přiložen. Závislosti jsou na tomto počítači už připravené; skript je najde ve společném pracovním prostředí. Při přesunu na jiný počítač je potřeba jednou připravit Python 3.12+:
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python reproduce.py
+.venv/bin/python -m pip install -r requirements_export.txt
+.venv/bin/python export_mp4.py --settings /cesta/k/atlas-export.json
 ```
 
-Jiný původní NetCDF CERES Ed4.2.1 lze zadat přes `--ceres-file /absolutni/cesta/soubor.nc`. Volba `--download` doplní chybějící vstupy; NASA vyžaduje přihlášení Earthdata. Přesná reprodukce používá přiložené původní soubory, protože živé datové URL se aktualizují. `--temperature-only` je výslovně nekompletní náhled.
+Po instalaci závislostí je i export offline. Na jiných platformách lze použít systémový FFmpeg, proměnnou `FFMPEG_BINARY` nebo binární soubor z `imageio-ffmpeg`. Přímé vytváření H.264 MP4 z offline HTML se nespoléhá na proměnlivou podporu kodeků prohlížeče; HTML předá parametry Pythonu prostřednictvím JSON. HTML tlačítko samo video nekóduje.
 
-ASR je tok na TOA v W/m², teplota je povrchová veličina v °C. Anomálie se přímo energeticky nezaměňují; samotné mapy nedokazují kauzalitu. Příčiny změn nejsou interpretovány.
+Výstup: **MP4 / H.264, 1920 × 1080, yuv420p**, konstantní snímková frekvence. Jeden vstupní snímek se zapíše právě jednou. Nastavitelných 0,25–60 snímků/s; doba videa = počet snímků / rychlost. Přiložená hotová ukázka `exports/animace_2000-2026_ASR20_T4_6fps.mp4` má 307 snímků a přibližně 51,17 s. Vedle videa je `.frames.json` s pořadím, přesným středem a hranicemi každého okna. Existující MP4 se nepřepisuje.
+
+## Data a reprodukce
+
+Společné pokrytí je **03/2000–08/2026**, 318 měsíců. CERES končí v srpnu 2026; Berkeley Earth v září 2026. První okno: 03/2000–02/2001, střed 30. 8. 2000 12:00 UTC. Poslední: 09/2025–08/2026, střed 2. 3. 2026 12:00 UTC. Středy nejsou mechanicky zaokrouhlené na první den měsíce. Časový posuvník má jeden krok na každý posun okna o měsíc.
+
+`original/` obsahuje původní atlas, původní vstupní NetCDF, roční i pětileté výsledky a nezměněný reprodukční skript. `data/rolling_anomalies.nc` obsahuje neoříznuté klouzavé anomálie ve float64, reference, časové hranice a počty platných měsíců. Znovu sestavit:
+
+```sh
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python build_animation.py
+```
+
+`build_animation.py` vytváří obě reprezentace ze stejných podkladů. HTML a MP4 používají identické float32 zobrazovací bloky, společnou projekční tabulku, paletu a pobřeží. Ztráta přesnosti pouze zobrazovací kopie je nejvýše 0,00000191 W/m² a 0,000000239 °C; výpočetní NetCDF zůstává float64. H.264 je ztrátový kodek a yuv420p podvzorkuje barevnost, takže dekódované video není bitově totožné s nekomprimovaným plátnem. Přiřazení hodnot, intervalů a barev před kompresí je shodné. Text se může mezi rastrovými enginy lišit ve vyhlazení okrajů znaků.
+
+Podrobnosti v `METHODOLOGY.md`. Kontroly v `validation_computation.json`, `validation_media.json` a `validation_browser.json`. Prohlížeč ani exportní skript nikam neodesílají uživatelská nastavení. Žádný geografický podklad není generován AI.

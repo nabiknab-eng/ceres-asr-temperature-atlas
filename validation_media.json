@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "html_python_parity": {
+    "scale_and_boundary_cases": 4422,
+    "all_allowed_scale_steps_tested": true,
+    "js_python_color_cases_identical": true,
+    "all_307_pairs_pre_coast_map_pixels_identical": true,
+    "shared_coast_overlay_identical_file": true,
+    "all_map_rgba_sha256": "7670bb9517efe6e3d0e02316b7d1cb8f0e06b9a6724e4b533d600fd2b444d6d5"
+  },
+  "videos": [
+    {
+      "file": "animace_2000-2026_ASR20_T4_6fps.mp4",
+      "frames_decoded": 307,
+      "codec": "H.264",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 6.0,
+      "all_months_and_inclusive_endpoints_match_manifest": true,
+      "all_pts_correct": true,
+      "max_mean_absolute_rgb_error": 3.19440987654321,
+      "min_map_psnr_db": 34.93176503133769
+    },
+    {
+      "file": "animation_subset.mp4",
+      "frames_decoded": 12,
+      "codec": "H.264",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": 12.0,
+      "all_months_and_inclusive_endpoints_match_manifest": true,
+      "all_pts_correct": true,
+      "max_mean_absolute_rgb_error": 5.16880987654321,
+      "min_map_psnr_db": 29.78771300831028
+    }
+  ],
+  "compact_js_only_export": {
+    "file": "animation_compact_subset.mp4",
+    "frames_decoded": 12,
+    "codec": "H.264",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 12.0,
+    "all_months_and_inclusive_endpoints_match_manifest": true,
+    "all_pts_correct": true,
+    "max_mean_absolute_rgb_error": 5.16880987654321,
+    "min_map_psnr_db": 29.78771300831028
+  }
+}

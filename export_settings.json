@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "mode": "rolling",
+  "start": 0,
+  "end": 306,
+  "asr_limit": 20,
+  "temperature_limit": 4,
+  "fps": 6
+}

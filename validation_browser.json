@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "browser_ui": {
+    "initial_frame": "30.08.2000 12:00 UTC",
+    "last_frame": "02.03.2026 12:00 UTC",
+    "timeline_first_last": true,
+    "previous_next": true,
+    "play_pause": true,
+    "play_speed_control": true,
+    "independent_asr_and_temperature_sliders": true,
+    "temperature_step_0_2_verified": true,
+    "scale_change_while_playing": true,
+    "shared_date_and_window_for_both_maps": true,
+    "chunk_boundary_frame_12_to_13": true,
+    "automatic_rolling_limits": [
+      40,
+      7
+    ],
+    "automatic_fiveyear_limits": [
+      16,
+      3.6
+    ],
+    "manual_slider_disables_only_own_auto": true,
+    "annual_2025_preserved": true,
+    "fiveyear_mode_preserved": true
+  },
+  "export_settings_from_html": {
+    "schema": 1,
+    "mode": "rolling",
+    "start": 120,
+    "end": 131,
+    "asr_limit": 5,
+    "temperature_limit": 1.2,
+    "fps": 12,
+    "width": 1920,
+    "height": 1080,
+    "auto_asr": false,
+    "auto_temperature": false,
+    "reference": "2001-2025"
+  },
+  "offline": {
+    "browser": "Safari",
+    "url_scheme": "file",
+    "local_server_stopped_before_additional_chunk_load": true,
+    "new_frame_153_loaded_from_disk": true,
+    "play_and_scale_change_at_frame_156": true,
+    "fresh_reload_without_server": true,
+    "no_external_script_styles_or_fonts": true
+  },
+  "screenshot": "docs/offline_safari.png",
+  "notes": [
+    "UI checks performed through browser controls; map pixel parity is independently recorded in validation_media.json."
+  ],
+  "original_files_unchanged_verified": 95
+}

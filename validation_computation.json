@@ -1,0 +1,56 @@
+{
+  "asr": {
+    "scalar_weighted_mean_max_error": 0.0,
+    "original_reference_loaded_without_recomputation": true,
+    "recomputed_reference_max_error": 2.2737367544323206e-13,
+    "recomputed_annual_anomaly_max_error": 2.2737367544323206e-13,
+    "max_float32_display_error": 1.9070448615821078e-06,
+    "rolling_max_abs": 51.865955808843864,
+    "incomplete_window_cells": 0,
+    "missing_reference_cells": 0,
+    "source_sha256": "5258da55e1df6e4ee461b708a797a1d94eb893765df3ce89ab38ab681fc31a4f"
+  },
+  "temperature": {
+    "scalar_weighted_mean_max_error": 0.0,
+    "original_reference_loaded_without_recomputation": true,
+    "recomputed_reference_max_error": 1.7763568394002505e-15,
+    "recomputed_annual_anomaly_max_error": 1.7763568394002505e-15,
+    "max_float32_display_error": 2.3834315321380473e-07,
+    "rolling_max_abs": 7.080921715911433,
+    "incomplete_window_cells": 93652,
+    "missing_reference_cells": 826,
+    "source_sha256": "937c4b1911849eb3c39cf91c4f0773f9565d412784080c4a66408b1c1eeb8d73"
+  },
+  "status": "PASS",
+  "common_months": 318,
+  "rolling_frames": 307,
+  "first_window": {
+    "index": 0,
+    "label": "30.08.2000 12:00 UTC",
+    "center": "2000-08-30T12:00:00+00:00",
+    "start": "2000-03-01T00:00:00+00:00",
+    "end_exclusive": "2001-03-01T00:00:00+00:00",
+    "window": "03/2000 – 02/2001",
+    "days": 365
+  },
+  "last_window": {
+    "index": 306,
+    "label": "02.03.2026 12:00 UTC",
+    "center": "2026-03-02T12:00:00+00:00",
+    "start": "2025-09-01T00:00:00+00:00",
+    "end_exclusive": "2026-09-01T00:00:00+00:00",
+    "window": "09/2025 – 08/2026",
+    "days": 365
+  },
+  "projection": {
+    "projection": "+proj=moll +lon_0=0 +R=1",
+    "central_meridian": 0,
+    "inverse_vs_proj_max_error_degrees": 2.2168933355715126e-12,
+    "max_relative_area_jacobian_error": 1.8424669567806973e-09,
+    "sphere_and_ellipse_area": 12.566370614359172,
+    "geographic_controls_pass": true
+  },
+  "time_alignment": "identical common YYYY-MM keys selected explicitly in each source",
+  "complete_global_month_sequence": true,
+  "original_annual_and_fiveyear_files_unchanged": true
+}
