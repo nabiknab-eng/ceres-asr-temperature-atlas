@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "mode": "rolling",
+  "start": 120,
+  "end": 131,
+  "asr_limit": 5,
+  "temperature_limit": 1.2,
+  "fps": 12,
+  "width": 1920,
+  "height": 1080,
+  "auto_asr": false,
+  "auto_temperature": false,
+  "reference": "2001-2025"
+}
