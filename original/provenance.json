@@ -1,0 +1,63 @@
+{
+  "asr": {
+    "path": "raw/CERES_EBAF-TOA_Edition4.2.1_200003-202608.nc",
+    "sha256": "5258da55e1df6e4ee461b708a797a1d94eb893765df3ce89ab38ab681fc31a4f",
+    "bytes": 943556512,
+    "units": {
+      "solar_mon": "W m-2",
+      "toa_sw_all_mon": "W m-2"
+    },
+    "selected_months": 300,
+    "source_period": {
+      "first": "2000-03",
+      "last": "2026-08"
+    },
+    "source_attributes": {
+      "title": "CERES EBAF (Energy Balanced and Filled) TOA Fluxes. Monthly Averages and 07/2005 to 06/2015 Climatology.",
+      "institution": "NASA/LaRC (Langley Research Center) Hampton, Va",
+      "Conventions": "CF-1.4",
+      "comment": "Climatology from 07/2005 to 06/2015",
+      "version": "Edition 4.2.1; Release Date November 25, 2024",
+      "DOI": "10.5067/TERRA-AQUA-NOAA20/CERES/EBAF-TOA_L3B004.2.1",
+      "Fill_Value": "Fill Value is -999.0"
+    },
+    "monthly_missing_values": 0,
+    "sorted_latitude": true,
+    "sorted_longitude": true,
+    "regridding": "none; 1-degree cell centers identical; longitude convention and index permutation only",
+    "url": "https://data.asdc.earthdata.nasa.gov/asdc-prod-protected/CERES/CERES_EBAF-TOA_Edition4.2.1/CERES_EBAF-TOA_Edition4.2.1_200003-202608.nc"
+  },
+  "temperature": {
+    "path": "raw/Global_TAVG_Gridded_1deg.nc",
+    "sha256": "937c4b1911849eb3c39cf91c4f0773f9565d412784080c4a66408b1c1eeb8d73",
+    "bytes": 429525123,
+    "units": {
+      "temperature": "degree C"
+    },
+    "selected_months": 300,
+    "source_period": {
+      "first": "1850-01",
+      "last": "2026-09"
+    },
+    "source_attributes": {
+      "Conventions": "Berkeley Earth Internal Convention (based on CF-1.5)",
+      "title": "Berkeley Earth Surface Temperature Anomaly Field",
+      "file_creation": "29-Oct-2026 11:03:07",
+      "institution": "Berkeley Earth",
+      "land_source_analysis_date": "13-Oct-2026 22:44:31",
+      "ocean_source_analysis_date": "14-Oct-2026 15:29:29",
+      "comment": "This file contains surface temperature anomaly field gridded on a 1° (longitude) by 1° (latitude) grid-box basis."
+    },
+    "monthly_missing_values": 21539,
+    "sorted_latitude": true,
+    "sorted_longitude": true,
+    "regridding": "none; 1-degree cell centers identical; longitude convention and index permutation only",
+    "url": "https://storage.googleapis.com/berkeley-earth-temperature-hr/global/gridded/Global_TAVG_Gridded_1deg.nc"
+  },
+  "coastline": {
+    "path": "raw/ne_50m_coastline.zip",
+    "sha256": "640f805509b822f57f4840a2e18d9ff2412cf1cf6976124701c2789436166fde",
+    "version": "4.1.0",
+    "url": "https://naturalearth.s3.amazonaws.com/50m_physical/ne_50m_coastline.zip"
+  }
+}
