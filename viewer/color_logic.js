@@ -1,0 +1,3 @@
+/* Pure numeric logic: shared browser / independent cross-language validation. */
+(function(root){'use strict';const C={index:function(a,L){if(!Number.isFinite(a))return 21;if(a===0)return 10;return a<0?9-Math.max(0,Math.min(9,Math.ceil(-a/L*10)-1)):11+Math.max(0,Math.min(9,Math.ceil(a/L*10)-1));}};
+C.rasterRGBA=function(field,L,lut,rgba32){const cell=new Uint32Array(64800);for(let i=0;i<cell.length;i++)cell[i]=rgba32[C.index(field[i],L)];const pixels=new Uint32Array(lut.length);for(let p=0;p<lut.length;p++)pixels[p]=lut[p]<0?0xffffffff:cell[lut[p]];return new Uint8ClampedArray(pixels.buffer);};root.AtlasColor=C;})(globalThis);
